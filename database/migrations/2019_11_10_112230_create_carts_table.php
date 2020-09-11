@@ -18,8 +18,14 @@ class CreateCartsTable extends Migration
             $table->unsignedBigInteger('user_id');
 			$table->decimal('total_price');
 
+            $table->unsignedBigInteger('shipping_id')->nullable();
+
             $table->foreign('user_id')
                   ->references('id')->on('users')
+                  ->onDelete('cascade');
+
+            $table->foreign('shipping_id')
+                  ->references('id')->on('shippings')
                   ->onDelete('cascade');
 
             $table->timestamps();

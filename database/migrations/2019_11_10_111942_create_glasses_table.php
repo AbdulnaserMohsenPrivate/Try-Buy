@@ -15,16 +15,24 @@ class CreateGlassesTable extends Migration
     {
         Schema::create('glasses', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('name_ar');
+            $table->string('name_en');
             $table->string('image');
-            $table->string('company');
-            $table->string('model');
+            $table->string('model_ar');
+            $table->string('model_en');
             $table->decimal('price');
-            $table->decimal('offer_price');
+            $table->string('searchImageMask');
+            $table->decimal('offer_price')->nullable();
             $table->integer('height');
             $table->integer('width');
-            $table->integer('sales');
-            $table->integer('rating');
+            $table->integer('sales')->default(0);
+            $table->integer('rating')->default(0);
+            $table->unsignedBigInteger('brand_id');
+            
+            $table->foreign('brand_id')
+                  ->references('id')->on('brands')
+                  ->onDelete('cascade');
+                  
             $table->timestamps();
         });
     }

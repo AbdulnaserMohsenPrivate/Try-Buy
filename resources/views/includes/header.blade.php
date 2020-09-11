@@ -48,7 +48,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/developer.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/developer card.css')}}">
 
-
+@yield('headerCss')
 
 
 </head>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWhishlistsTable extends Migration
+class CreateShippingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateWhishlistsTable extends Migration
      */
     public function up()
     {
-        Schema::create('whishlists', function (Blueprint $table) {
+        Schema::create('shippings', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('glasses_id');
+            $table->unsignedBigInteger('brand_id');
+            $table->decimal('price');
+            $table->date('deleverd_date');
+            $table->boolean('deleverd');
 
-            $table->foreign('user_id')
-                  ->references('id')->on('users')
-                  ->onDelete('cascade');
-
-            $table->foreign('glasses_id')
-                  ->references('id')->on('glasses')
+            $table->foreign('brand_id')
+                  ->references('id')->on('brands')
                   ->onDelete('cascade');
 
             $table->timestamps();
@@ -37,6 +35,6 @@ class CreateWhishlistsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('whishlists');
+        Schema::dropIfExists('shippings');
     }
 }

@@ -25,7 +25,7 @@ class MainController extends Controller
             $page = 1;   
         }
         
-        return view('index', compact('page'));
+        return view('index_original', compact('page'));
     }
 
     public function admin()

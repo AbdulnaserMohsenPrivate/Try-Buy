@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTypesTable extends Migration
+class CreateBranchesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('types', function (Blueprint $table) {
+        Schema::create('branches', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name_ar'); 
-            $table->string('name_en'); //0 for sight glasses and 1 for sun glasses
+            $table->string('name_ar');
+            $table->string('name_en');
+            $table->string('location_ar');
+            $table->string('location_en');
+            $table->string('image')->nullable();
+            $table->string('google_map')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreateTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('branches');
     }
 }

@@ -2242,7 +2242,9 @@ input.num-product::-webkit-inner-spin-button {
   position: relative;
   border: 1px solid #e6e6e6;
 }
-
+[dir = "rtl"] .block1-image{
+	transform: scaleX(-1);
+}
 .block1-txt {
   background-color: rgba(103,117,214,0.0);
 }

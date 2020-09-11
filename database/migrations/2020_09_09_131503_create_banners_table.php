@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTypesTable extends Migration
+class CreateBannersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('types', function (Blueprint $table) {
+        Schema::create('banners', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name_ar'); 
-            $table->string('name_en'); //0 for sight glasses and 1 for sun glasses
+            $table->string('image');
+            $table->string('title_ar');
+            $table->string('title_en');
+            $table->string('small_pargrahp_ar');
+            $table->string('small_pargrahp_en');
+            $table->string('url');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreateTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('banners');
     }
 }

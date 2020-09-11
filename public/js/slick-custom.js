@@ -128,8 +128,18 @@
 
         /*==================================================================
         [ Slick2 ]*/
+		var rtl = false;
+		var prevArrow ='<button class="arrow-slick2 prev-slick2"><i class="fa fa-angle-left" aria-hidden="true"></i></button>';
+		var nextArrow='<button class="arrow-slick2 next-slick2"><i class="fa fa-angle-right" aria-hidden="true"></i></button>';
+		if ($('html').is(':lang(ar)')) 
+		{
+			rtl = true;
+			prevArrow ='<button class="arrow-slick2 next-slick2"><i class="fa fa-angle-right" aria-hidden="true"></i></button>';
+			nextArrow='<button class="arrow-slick2 prev-slick2"><i class="fa fa-angle-left" aria-hidden="true"></i></button>';
+		}
         $('.wrap-slick2').each(function(){
             $(this).find('.slick2').slick({
+			  rtl: rtl, //me
               slidesToShow: 4,
               slidesToScroll: 1,
               infinite: true,
@@ -137,8 +147,8 @@
               autoplaySpeed: 6000,
               arrows: true,
               appendArrows: $(this),
-              prevArrow:'<button class="arrow-slick2 prev-slick2"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-              nextArrow:'<button class="arrow-slick2 next-slick2"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',  
+              prevArrow:prevArrow,
+              nextArrow:nextArrow,  
               responsive: [
                 {
                   breakpoint: 1200,

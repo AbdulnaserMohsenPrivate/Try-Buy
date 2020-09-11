@@ -18,12 +18,19 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('user_id');
 			$table->decimal('total_price');
 			$table->string('country');
+            $table->string('state');
             $table->string('city');
             $table->string('address');
+
+            $table->unsignedBigInteger('shipping_id');
 
             $table->foreign('user_id')
                   ->references('id')->on('users')
                   ->onDelete('cascade');
+
+            $table->foreign('shipping_id')
+                  ->references('id')->on('shippings')
+                  ->onDelete('cascade');      
 
             $table->timestamps();
         });

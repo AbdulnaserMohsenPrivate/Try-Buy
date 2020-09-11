@@ -291,7 +291,7 @@
 			{
 				sku: 'blaze_round_or_bleudegrademiroir',
 				searchImageMask: 'https://appstatic.jeeliz.com/jeewidget/images/target.png',
-				searchImageColor: 0xFF0000
+				searchImageColor: 0x55ffee
 			});
 
     });

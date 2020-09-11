@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGlassesWhishesTable extends Migration
+class CreateGlassesOffersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CreateGlassesWhishesTable extends Migration
      */
     public function up()
     {
-        Schema::create('glasses__whishes', function (Blueprint $table) {
+        Schema::create('glasses__offers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('glasses_id');
-            $table->unsignedBigInteger('wish_id');
+            $table->unsignedBigInteger('offer_id');
 
             $table->foreign('glasses_id')
                   ->references('id')->on('glasses')
                   ->onDelete('cascade');
 
-            $table->foreign('wish_id')
-                  ->references('id')->on('whishlists')
+            $table->foreign('offer_id')
+                  ->references('id')->on('offers')
                   ->onDelete('cascade');
 
             $table->timestamps();
@@ -37,6 +37,6 @@ class CreateGlassesWhishesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('glasses__whishes');
+        Schema::dropIfExists('glasses__offers');
     }
 }

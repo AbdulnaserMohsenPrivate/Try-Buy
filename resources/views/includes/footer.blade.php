@@ -21,8 +21,8 @@
 		      	</ul>
 		 
 		    	<ul>
-		        	<li>Repos: <span>23</span></li>
-		        	<li>Location: <span>New York, US</span></li>
+		    		<li class="fa fa-envelope tt-info hover-tt-bottom"> naserahmed1995@gmail.com</li>
+
 		    	</ul>
 		    	<hr>
 		      
@@ -36,9 +36,7 @@
 		    	<hr>
 		    	
 		    	<div class="developer-profile-action-buttons">
-		        	<a href="#" class="button">Contact</a>
-		        	<a href="#" class="button">Profile</a>
-		        	<a href="#" class="button">Resume</a>
+		        	<a href="#" class="button">Download CV</a>
 		    	</div>
 		    </div>
 		</div>
@@ -669,6 +667,8 @@
 	
 <!--===============================================================================================-->
 	<script src="{{asset('js/main.js')}}"></script>
+
+@yield('footerJs')
 
 </body>
 </html>	
