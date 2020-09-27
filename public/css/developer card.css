@@ -14,7 +14,8 @@ hr {
 
 .button {
   text-decoration: none;
-  color: grey;
+  background-color: var(--main-color);
+  color:#fff;
   padding: .5em 1em;
   font-size: .83em;
   font-weight: bold;
@@ -22,12 +23,11 @@ hr {
   margin: 0 .3em;
 }
 .button:hover {
-  background: #ecedf0;
-  color: #6096ba;
+  background-color: var(--second-color);
+  color:#fff;
 }
 
 .developer-card {
-  width: 19%;
   border-radius: 2px;
   margin: .36em;
   padding: .6em .6em;
@@ -51,12 +51,12 @@ hr {
 }
 .developer-card .developer-links a {
   text-decoration: none;
-  color: grey;
+  color: #00ACC1;
   margin: 0 .4em;
   transition: 0.3s ease-out;
 }
 .developer-card .developer-links a:hover {
-  color: #6096ba;
+  color: #00ACC1;
   opacity: .9;
 }
 .developer-card ul {
@@ -80,6 +80,7 @@ hr {
   max-width: 100px;
   max-height: 100px;
   border-radius: 5%;
+  display:inline;
 }
 
 [data-hover] {

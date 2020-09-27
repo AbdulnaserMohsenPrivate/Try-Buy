@@ -1,217 +1,238 @@
 <div class="container">
 	<i class="fa fa-users"></i><h2 class="footer-title">{{ __('developer.team') }}</h2>
-	<div class="row">
-		<div class="developer-card">
-		    <div class="developer-header">
-		    	<img class="developer-profile-img" src="{{asset('images/teamleader.png')}}">
-		    </div>
-		    
-		    <div class="developer-content">
-		    	<h4>{{ __('developer.name') }}</h4>
-		    	<h5>({{ __('developer.teamLeader') }})</h5>
-		    	<p>{{ __('developer.job') }}</p>
-		      
-		    	<hr>
-		    	<ul>
-		        	<li class="tt-info 	hover-tt-bottom" data-hover="Proficient">HTML</li>
-		        	<li class="tt-info hover-tt-bottom" data-hover="Intermediate">CSS</li>
-		        	<li class="tt-info hover-tt-bottom" data-hover="Expert">JavaScript</li>
-		        	<li class="tt-info hover-tt-bottom" data-hover="Experienced">React</li>
-		        	<li class="tt-info hover-tt-bottom" data-hover="Intermediate">Photoshop</li>
-		      	</ul>
-		 
-		    	<ul>
-		    		<li class="fa fa-envelope tt-info hover-tt-bottom"> naserahmed1995@gmail.com</li>
+	<div class="wrap-slick2">
+              <div class="slick2">
+                
+                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+                  	<!-- Block2 -->
+                  	<div class="developer-card ">
+					    <div class="developer-header ">
+					    	<img class="developer-profile-img mx-auto" src="{{asset('images/teamleader.png')}}">
+					    </div>
+					    
+					    <div class="developer-content">
+					    	<h4>{{ __('developer.name') }}</h4>
+					    	<h5>({{ __('developer.teamLeader') }})</h5>
+					    	<p>{{ __('developer.job') }}</p>
 
-		    	</ul>
-		    	<hr>
-		      
-		    	<div class="developer-links">
-		        	<a href="#" class="fa fa-instagram tt-info hover-tt-bottom" data-hover="Instagram"></a>
-		        	<a href="#" class="fa fa-linkedin tt-info hover-tt-bottom" data-hover="LinkedIn"></a>
-		        	<a href="#" class="fa fa-twitter tt-info hover-tt-bottom" data-hover="Twitter"></a>
-		        	<a href="#" class="fa fa-globe tt-info hover-tt-bottom" data-hover="Website"></a>
-		        	<a href="#" class="fa fa-github tt-info hover-tt-bottom" data-hover="Github"></a>
-		      	</div>
-		    	<hr>
-		    	
-		    	<div class="developer-profile-action-buttons">
-		        	<a href="#" class="button">Download CV</a>
-		    	</div>
-		    </div>
-		</div>
+					    	<ul>
+					        	<li class="tt-info 	hover-tt-bottom" data-hover="Proficient">HTML</li>
+					        	<li class="tt-info hover-tt-bottom" data-hover="Intermediate">CSS</li>
+					        	<li class="tt-info hover-tt-bottom" data-hover="Expert">JavaScript</li>
+					        	<li class="tt-info hover-tt-bottom" data-hover="Experienced">React</li>
+					        	<li class="tt-info hover-tt-bottom" data-hover="Intermediate">Photoshop</li>
+					      	</ul>
+					 
+					    	<ul>
+					    		<li class="fa fa-envelope tt-info hover-tt-bottom"> naserahmed1995@gmail.com</li>
 
-		<div class="developer-card">
-			<div class="developer-header">
-	    		<img class="developer-profile-img" src="{{asset('images/malemember.png')}}">
-	    	</div>
-	    	
-	    	<div class="developer-content">
-	    		<h4>James Norman</h4>
-	    		<p>Frontend Web Developer</p>
-	      
-	    		<hr>
-	    		<ul>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Proficient">HTML</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">CSS</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Expert">JavaScript</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Experienced">React</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">Photoshop</li>
-	    		</ul>
-	 
-	    		<ul>
-	    			<li>Repos: <span>23</span></li>
-	    			<li>Location: <span>New York, US</span></li>
-	    		</ul>
-	    		
-	    		<hr>
-	      
-	    		<div class="developer-links">
-	    			<a href="#" class="fa fa-instagram tt-info hover-tt-bottom" data-hover="Instagram"></a>
-	    			<a href="#" class="fa fa-linkedin tt-info hover-tt-bottom" data-hover="LinkedIn"></a>
-	    			<a href="#" class="fa fa-twitter tt-info hover-tt-bottom" data-hover="Twitter"></a>
-	    			<a href="#" class="fa fa-globe tt-info hover-tt-bottom" data-hover="Website"></a>
-	    			<a href="#" class="fa fa-github tt-info hover-tt-bottom" data-hover="Github"></a>
-	    		</div>
-	    		<hr>
-	    		
-	    		<div class="developer-profile-action-buttons">
-	    			<a href="#" class="button">Contact</a>
-	    			<a href="#" class="button">Profile</a>
-	    			<a href="#" class="button">Resume</a>
-	    		</div>
-	      
-	    	</div>
-		</div>
-		<div class="developer-card">
-			<div class="developer-header">
-	    		<img class="developer-profile-img" src="{{asset('images/femalemember.png')}}">
-	    	</div>
-	    	
-	    	<div class="developer-content">
-	    		<h4>James Norman</h4>
-	    		<p>Frontend Web Developer</p>
-	      
-	    		<hr>
-	    		<ul>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Proficient">HTML</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">CSS</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Expert">JavaScript</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Experienced">React</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">Photoshop</li>
-	    		</ul>
-	 
-	    		<ul>
-	    			<li>Repos: <span>23</span></li>
-	    			<li>Location: <span>New York, US</span></li>
-	    		</ul>
-	    		
-	    		<hr>
-	      
-	    		<div class="developer-links">
-	    			<a href="#" class="fa fa-instagram tt-info hover-tt-bottom" data-hover="Instagram"></a>
-	    			<a href="#" class="fa fa-linkedin tt-info hover-tt-bottom" data-hover="LinkedIn"></a>
-	    			<a href="#" class="fa fa-twitter tt-info hover-tt-bottom" data-hover="Twitter"></a>
-	    			<a href="#" class="fa fa-globe tt-info hover-tt-bottom" data-hover="Website"></a>
-	    			<a href="#" class="fa fa-github tt-info hover-tt-bottom" data-hover="Github"></a>
-	    		</div>
-	    		<hr>
-	    		
-	    		<div class="developer-profile-action-buttons">
-	    			<a href="#" class="button">Contact</a>
-	    			<a href="#" class="button">Profile</a>
-	    			<a href="#" class="button">Resume</a>
-	    		</div>
-	      
-	    	</div>
-		</div>
-		<div class="developer-card">
-			<div class="developer-header">
-	    		<img class="developer-profile-img" src="{{asset('images/femalemember.png')}}">
-	    	</div>
-	    	
-	    	<div class="developer-content">
-	    		<h4>James Norman</h4>
-	    		<p>Frontend Web Developer</p>
-	      
-	    		<hr>
-	    		<ul>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Proficient">HTML</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">CSS</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Expert">JavaScript</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Experienced">React</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">Photoshop</li>
-	    		</ul>
-	 
-	    		<ul>
-	    			<li>Repos: <span>23</span></li>
-	    			<li>Location: <span>New York, US</span></li>
-	    		</ul>
-	    		
-	    		<hr>
-	      
-	    		<div class="developer-links">
-	    			<a href="#" class="fa fa-instagram tt-info hover-tt-bottom" data-hover="Instagram"></a>
-	    			<a href="#" class="fa fa-linkedin tt-info hover-tt-bottom" data-hover="LinkedIn"></a>
-	    			<a href="#" class="fa fa-twitter tt-info hover-tt-bottom" data-hover="Twitter"></a>
-	    			<a href="#" class="fa fa-globe tt-info hover-tt-bottom" data-hover="Website"></a>
-	    			<a href="#" class="fa fa-github tt-info hover-tt-bottom" data-hover="Github"></a>
-	    		</div>
-	    		<hr>
-	    		
-	    		<div class="developer-profile-action-buttons">
-	    			<a href="#" class="button">Contact</a>
-	    			<a href="#" class="button">Profile</a>
-	    			<a href="#" class="button">Resume</a>
-	    		</div>
-	      
-	    	</div>
-		</div>
-		<div class="developer-card">
-			<div class="developer-header">
-	    		<span id="developer-status" class="fa fa-briefcase tt-info hover-tt-bottom" data-hover="Open to Opportunities"></span>
-	    		<img class="developer-profile-img" src="{{asset('images/femalemember.png')}}">
-	    	</div>
-	    	
-	    	<div class="developer-content">
-	    		<h4>James Norman</h4>
-	    		<p>Frontend Web Developer</p>
-	      
-	    		<hr>
-	    		<ul>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Proficient">HTML</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">CSS</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Expert">JavaScript</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Experienced">React</li>
-	    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">Photoshop</li>
-	    		</ul>
-	 
-	    		<ul>
-	    			<li>Repos: <span>23</span></li>
-	    			<li>Location: <span>New York, US</span></li>
-	    		</ul>
-	    		
-	    		<hr>
-	      
-	    		<div class="developer-links">
-	    			<a href="#" class="fa fa-instagram tt-info hover-tt-bottom" data-hover="Instagram"></a>
-	    			<a href="#" class="fa fa-linkedin tt-info hover-tt-bottom" data-hover="LinkedIn"></a>
-	    			<a href="#" class="fa fa-twitter tt-info hover-tt-bottom" data-hover="Twitter"></a>
-	    			<a href="#" class="fa fa-globe tt-info hover-tt-bottom" data-hover="Website"></a>
-	    			<a href="#" class="fa fa-github tt-info hover-tt-bottom" data-hover="Github"></a>
-	    		</div>
-	    		<hr>
-	    		
-	    		<div class="developer-profile-action-buttons">
-	    			<a href="#" class="button">Contact</a>
-	    			<a href="#" class="button">Profile</a>
-	    			<a href="#" class="button">Resume</a>
-	    		</div>
-	      
-	    	</div>
-		</div>
-	</div>
-</div>
+					    	</ul>
+					    	
+					    	<div class="developer-links">
+					        	<a href="#" class="fa fa-instagram tt-info hover-tt-bottom" data-hover="Instagram"></a>
+					        	<a href="#" class="fa fa-linkedin tt-info hover-tt-bottom" data-hover="LinkedIn"></a>
+					        	<a href="#" class="fa fa-twitter tt-info hover-tt-bottom" data-hover="Twitter"></a>
+					        	<a href="#" class="fa fa-globe tt-info hover-tt-bottom" data-hover="Website"></a>
+					        	<a href="#" class="fa fa-github tt-info hover-tt-bottom" data-hover="Github"></a>
+					      	</div>
+					    	<hr>
+					    	<div class="developer-profile-action-buttons">
+					        	<a href="#" class="button">Download CV</a>
+					    	</div>
+					    </div>
+					</div>
+                </div>
+
+                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+                  	<!-- Block2 -->
+                  	<div class="developer-card">
+						<div class="developer-header ">
+				    		<img class="developer-profile-img mx-auto" src="{{asset('images/malemember.png')}}">
+				    	</div>
+				    	
+				    	<div class="developer-content">
+				    		<h4>James Norman</h4>
+				    		<p>Frontend Web Developer</p>
+				      
+				    		<hr>
+				    		<ul>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Proficient">HTML</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">CSS</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Expert">JavaScript</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Experienced">React</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">Photoshop</li>
+				    		</ul>
+				 
+				    		<ul>
+				    			<li>Repos: <span>23</span></li>
+				    			<li>Location: <span>New York, US</span></li>
+				    		</ul>
+				    		
+				    		<hr>
+				      
+				    		<div class="developer-links">
+				    			<a href="#" class="fa fa-instagram tt-info hover-tt-bottom" data-hover="Instagram"></a>
+				    			<a href="#" class="fa fa-linkedin tt-info hover-tt-bottom" data-hover="LinkedIn"></a>
+				    			<a href="#" class="fa fa-twitter tt-info hover-tt-bottom" data-hover="Twitter"></a>
+				    			<a href="#" class="fa fa-globe tt-info hover-tt-bottom" data-hover="Website"></a>
+				    			<a href="#" class="fa fa-github tt-info hover-tt-bottom" data-hover="Github"></a>
+				    		</div>
+				    		<hr>
+				    		
+				    		<div class="developer-profile-action-buttons">
+				    			<a href="#" class="button">Contact</a>
+				    			<a href="#" class="button">Profile</a>
+				    			<a href="#" class="button">Resume</a>
+				    		</div>
+				      
+				    	</div>
+					</div>
+                </div>
+
+                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+                  	<!-- Block2 -->
+                  	<div class="developer-card">
+						<div class="developer-header">
+				    		<img class="developer-profile-img" src="{{asset('images/femalemember.png')}}">
+				    	</div>
+				    	
+				    	<div class="developer-content">
+				    		<h4>James Norman</h4>
+				    		<p>Frontend Web Developer</p>
+				      
+				    		<hr>
+				    		<ul>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Proficient">HTML</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">CSS</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Expert">JavaScript</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Experienced">React</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">Photoshop</li>
+				    		</ul>
+				 
+				    		<ul>
+				    			<li>Repos: <span>23</span></li>
+				    			<li>Location: <span>New York, US</span></li>
+				    		</ul>
+				    		
+				    		<hr>
+				      
+				    		<div class="developer-links">
+				    			<a href="#" class="fa fa-instagram tt-info hover-tt-bottom" data-hover="Instagram"></a>
+				    			<a href="#" class="fa fa-linkedin tt-info hover-tt-bottom" data-hover="LinkedIn"></a>
+				    			<a href="#" class="fa fa-twitter tt-info hover-tt-bottom" data-hover="Twitter"></a>
+				    			<a href="#" class="fa fa-globe tt-info hover-tt-bottom" data-hover="Website"></a>
+				    			<a href="#" class="fa fa-github tt-info hover-tt-bottom" data-hover="Github"></a>
+				    		</div>
+				    		<hr>
+				    		
+				    		<div class="developer-profile-action-buttons">
+				    			<a href="#" class="button">Contact</a>
+				    			<a href="#" class="button">Profile</a>
+				    			<a href="#" class="button">Resume</a>
+				    		</div>
+				      
+				    	</div>
+					</div>
+                </div>
+
+                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+                  	<!-- Block2 -->
+                  	<div class="developer-card">
+						<div class="developer-header">
+				    		<img class="developer-profile-img" src="{{asset('images/femalemember.png')}}">
+				    	</div>
+				    	
+				    	<div class="developer-content">
+				    		<h4>James Norman</h4>
+				    		<p>Frontend Web Developer</p>
+				      
+				    		<hr>
+				    		<ul>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Proficient">HTML</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">CSS</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Expert">JavaScript</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Experienced">React</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">Photoshop</li>
+				    		</ul>
+				 
+				    		<ul>
+				    			<li>Repos: <span>23</span></li>
+				    			<li>Location: <span>New York, US</span></li>
+				    		</ul>
+				    		
+				    		<hr>
+				      
+				    		<div class="developer-links">
+				    			<a href="#" class="fa fa-instagram tt-info hover-tt-bottom" data-hover="Instagram"></a>
+				    			<a href="#" class="fa fa-linkedin tt-info hover-tt-bottom" data-hover="LinkedIn"></a>
+				    			<a href="#" class="fa fa-twitter tt-info hover-tt-bottom" data-hover="Twitter"></a>
+				    			<a href="#" class="fa fa-globe tt-info hover-tt-bottom" data-hover="Website"></a>
+				    			<a href="#" class="fa fa-github tt-info hover-tt-bottom" data-hover="Github"></a>
+				    		</div>
+				    		<hr>
+				    		
+				    		<div class="developer-profile-action-buttons">
+				    			<a href="#" class="button">Contact</a>
+				    			<a href="#" class="button">Profile</a>
+				    			<a href="#" class="button">Resume</a>
+				    		</div>
+				      
+				    	</div>
+					</div>
+                </div>
+
+                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+                  	<!-- Block2 -->
+                  	<div class="developer-card">
+						<div class="developer-header">
+				    		<span id="developer-status" class="fa fa-briefcase tt-info hover-tt-bottom" data-hover="Open to Opportunities"></span>
+				    		<img class="developer-profile-img" src="{{asset('images/femalemember.png')}}">
+				    	</div>
+				    	
+				    	<div class="developer-content">
+				    		<h4>James Norman</h4>
+				    		<p>Frontend Web Developer</p>
+				      
+				    		<hr>
+				    		<ul>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Proficient">HTML</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">CSS</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Expert">JavaScript</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Experienced">React</li>
+				    			<li class="tt-info hover-tt-bottom" data-hover="Intermediate">Photoshop</li>
+				    		</ul>
+				 
+				    		<ul>
+				    			<li>Repos: <span>23</span></li>
+				    			<li>Location: <span>New York, US</span></li>
+				    		</ul>
+				    		
+				    		<hr>
+				      
+				    		<div class="developer-links">
+				    			<a href="#" class="fa fa-instagram tt-info hover-tt-bottom" data-hover="Instagram"></a>
+				    			<a href="#" class="fa fa-linkedin tt-info hover-tt-bottom" data-hover="LinkedIn"></a>
+				    			<a href="#" class="fa fa-twitter tt-info hover-tt-bottom" data-hover="Twitter"></a>
+				    			<a href="#" class="fa fa-globe tt-info hover-tt-bottom" data-hover="Website"></a>
+				    			<a href="#" class="fa fa-github tt-info hover-tt-bottom" data-hover="Github"></a>
+				    		</div>
+				    		<hr>
+				    		
+				    		<div class="developer-profile-action-buttons">
+				    			<a href="#" class="button">Contact</a>
+				    			<a href="#" class="button">Profile</a>
+				    			<a href="#" class="button">Resume</a>
+				    		</div>
+				      
+				    	</div>
+					</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+      </div>
 
 
 <!-- Footer -->
@@ -307,20 +328,20 @@
 					</ul>
 				</div>
 
-				<div class="col-sm-6 col-lg-3 p-b-50">
+				<div class="col-sm-6 col-lg-3 p-b-50 ">
 					<h4 class="stext-301 cl0 p-b-30">
 						{{ __('header.about') }}
 					</h4>
 
-					<p class="stext-107 cl7 size-201">
+					<p class="stext-107 cl7 ">
 						{{ __('footer.address') }} 
 					</p>
 
-					<p class="stext-107 cl7 size-201">
+					<p class="stext-107 cl7 ">
 						<i class="fa fa-mobile"> </i> {{ __('footer.mobile') }}
 					</p>
 
-					<p class="stext-107 cl7 size-201">
+					<p class="stext-107 cl7  ">
 						<i class="fa fa-envelope"> </i> try&buy@try&buy.com
 					</p>
 
@@ -668,6 +689,27 @@
 <!--===============================================================================================-->
 	<script src="{{asset('js/main.js')}}"></script>
 
+	
+    <script>
+	    var botmanWidget = {
+	        aboutText: 'ssdsd',
+	        introMessage: "✋ Hi! I'm form ItSolutionStuff.com"
+	    };
+    </script>
+  
+    <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
+    <script> 
+	        var botmanWidget = {
+	        title:'Scarletbot',
+	        introMessage: 'Hello, I am a Scarlet! I am here to assist you and answer all your questions about our products and services!',
+	        mainColor:'#00B8D4',
+	        aboutText:'',
+	        bubbleBackground:'#00B8D4',
+	        headerTextColor: '#fff',
+	    };
+
+	</script>
+    
 @yield('footerJs')
 
 </body>

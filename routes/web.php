@@ -14,6 +14,7 @@
 Route::get('/', 'MainController@index')->name('index');
 Route::get('lang/{locale}', 'MainController@lang');
 
+Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 
 
 

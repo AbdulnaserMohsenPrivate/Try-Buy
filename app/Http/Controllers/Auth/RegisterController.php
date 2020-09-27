@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use App\Rules\en_or_ar;
+
 class RegisterController extends Controller
 {
     /*
@@ -49,11 +51,15 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255','min:3','regex:/^[\p{Arabic} ]|[a-zA-Z ]+$/u'],
+            'name' => ['required', 'string', 'max:255','min:3', new en_or_ar],
             'email_register' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
             'phone' => ['required', 'min:10','regex:/^\+?\d{10,}$/'],
             'address' => ['required','min:3','regex:/^[\p{Arabic}0-9\-\, ]|[a-zA-Z0-9\-\, ]+$/u'],
+            'country' => ['required'],
+            'state' => ['required'],
+            'city' => ['required'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            
         ]);
     }
 
@@ -66,7 +72,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'name_en' => $data['name'],
             'email' => $data['email_register'],
             'email_verified_at' => NULL,
             'phone' => $data['phone'],

@@ -1,20 +1,31 @@
+  
+@extends('includes.all')
 
-@include('includes.header')
+@section('headerCss')
 
-<link rel='stylesheet' href='css/loginAndRegister.css'>
+  <link rel='stylesheet' href='css/loginAndRegister.css'>
 
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
 
-<!-- to add flags and styling select -->
-<!-- <msdropdown> -->
-<link rel="stylesheet" type="text/css" href="css/dd.css" />
-<!-- </msdropdown> -->
-<link rel="stylesheet" type="text/css" href="css/flags.css" />
+  <!-- to add flags and styling select -->
+  <!-- <msdropdown> -->
+  <link rel="stylesheet" type="text/css" href="css/dd.css" />
+  <!-- </msdropdown> -->
+  <link rel="stylesheet" type="text/css" href="css/flags.css" />
+  
+@endsection
 
 
-<div class="registerArea ">
+
+@section('content')
+
+
+
+<div class="registerArea @if($errors->has('email_register')) forregister @elseif($errors->has('email')) @elseif(url()->current() == route('register')) forregister  @endif ">
   <div class="wrapper ">
-    <form class="login @error('email_register') up @else push-down is-active @enderror validate-form " method="POST" action="{{ route('login') }}">
+
+    
+    <form class="login @if($errors->has('email_register')) up @elseif($errors->has('email')) push-down is-active @elseif(url()->current() == route('login')) push-down is-active @else up  @endif validate-form " method="POST" action="{{ route('login') }}">
       @csrf
       
       <div class="profile"><i class="fa fa-sign-in"></i></div>
@@ -84,7 +95,8 @@
    
     </form>
     
-    <form class="register @error('email_register') is-active pull-up  @else down @enderror validate-form" method="POST" action="{{ route('register') }}">
+    
+    <form class="register @if($errors->has('email_register')) pull-up is-active @elseif($errors->has('email')) down @elseif(url()->current() == route('register')) pull-up is-active @else down  @endif validate-form" method="POST" action="{{ route('register') }}">
       @csrf
       
       <div class="form-element validate-input @error('name') has-invalid alert-validate @enderror" data-validate="@error('name'){{ $message }} @else{{ __('registerLogin.nameValidate') }} @enderror">
@@ -109,7 +121,7 @@
       </div>
       <div class="form-element container-fluid" >
         <div class="row p-t-20">
-          <div class=" p-t-20 p-l-10 p-r-10 col-md-4">
+          <div class=" p-t-20 p-l-10 p-r-10 col-md-4 @error('country') alert-validate @enderror">
               <div class=" select " >
                 <select style="width:85%" class="tech" name="tech" id="countryId" >
                   <option value="0">{{ __('registerLogin.selectCountry') }}</option>  
@@ -119,7 +131,7 @@
           </div>
 
           
-          <div class=" p-t-20 p-l-10 p-r-10 col-md-4">
+          <div class=" p-t-20 p-l-10 p-r-10 col-md-4 @error('state') alert-validate @enderror">
             <div class="  select" >
                 <select style="width:85%" class="tech" name="tech" id="stateId">
                     <option value="0">{{ __('registerLogin.selectState') }}</option>
@@ -128,7 +140,7 @@
               </div>
           </div>
 
-          <div class=" p-t-20 p-l-10 p-r-10 col-md-4">
+          <div class=" p-t-20 p-l-10 p-r-10 col-md-4 @error('city') alert-validate @enderror">
               <div class="  select">
                 <select style="width:85%" class="tech" name="tech" id="cityId">
                     <option value="0">{{ __('registerLogin.selectCity') }}</option>
@@ -163,28 +175,33 @@
       <button type="submit" class="btn-login">{{ __('registerLogin.signUp') }}</button>
     </form>
     
-    <div class="login-view-toggle @error('email_register') move-top @else move-bottom @enderror">
-      <div class="sign-up-toggle @error('email_register') @else is-active @enderror">{{ __('registerLogin.notHaveAcc') }} <a href="#">{{ __('registerLogin.signUp') }}</a></div>
-      <div class="login-toggle @error('email_register') is-active @enderror"><i class="fa fa-reply"></i> {{ __('registerLogin.haveAcc') }} <a href="#">{{ __('registerLogin.login') }}</a></div>
+    <div class="login-view-toggle @if($errors->has('email_register')) move-top @elseif($errors->has('email')) move-bottom @elseif(url()->current() == route('login')) move-bottom @else move-top @endif ">
+      <div class="sign-up-toggle @if($errors->has('email_register')) @elseif($errors->has('email')) is-active @elseif(url()->current() == route('login')) is-active @else  @endif ">{{ __('registerLogin.notHaveAcc') }} <a href="#">{{ __('registerLogin.signUp') }}</a></div>
+      <div class="login-toggle @if($errors->has('email_register')) is-active @elseif($errors->has('email'))  @elseif(url()->current() == route('register')) is-active @else  @endif "><i class="fa fa-reply"></i> {{ __('registerLogin.haveAcc') }} <a href="#">{{ __('registerLogin.login') }}</a></div>
     </div>
   </div>
 </div>
 
-<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='js/loginAndRegister.js'></script>
+
+@endsection
 
 
 
-<!-- to get countries and their stats and their cities -->
- <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
- <!--  <script src="//geodata.solutions/includes/countrystatecity.js"></script> -->
-  
-  <!-- by myself from geoname api -->
-  <script src='js/country state city.js'></script>
 
-<!-- to add flags and styling select -->
-<script src="js/jquery.dd.js"></script>
+@section('footerJs')
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src='js/loginAndRegister.js'></script>
 
 
 
-@include('includes.footer')
+  <!-- to get countries and their stats and their cities -->
+   <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+   <!--  <script src="//geodata.solutions/includes/countrystatecity.js"></script> -->
+    
+    <!-- by myself from geoname api -->
+    <script src='js/country state city.js'></script>
+
+  <!-- to add flags and styling select -->
+  <script src="js/jquery.dd.js"></script>
+
+@endsection

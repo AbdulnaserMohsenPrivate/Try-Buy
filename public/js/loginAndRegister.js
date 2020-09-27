@@ -16,6 +16,7 @@ $(function(){
   
   $('.sign-up-toggle a').on('click',function(){
     toggleView();
+	$('.registerArea').addClass('forregister'); //me
     $('.login-view-toggle').addClass('move-top');
     $('.login-view-toggle').removeClass('move-bottom');
     slideElements({
@@ -30,6 +31,7 @@ $(function(){
   
   $('.login-toggle a').on('click',function(){
     toggleView();
+	$('.registerArea').removeClass('forregister'); //me
     $('.login-view-toggle').addClass('move-bottom');
     $('.login-view-toggle').removeClass('move-top');
     slideElements({
@@ -206,7 +208,7 @@ $(function(){
                 return false;
             }
         }
-		if($(input).attr('name') == 'email_register') 
+		else if($(input).attr('name') == 'email_register') 
 		{
             if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) 
 			{
@@ -214,11 +216,10 @@ $(function(){
             }
         }
         
-		if($(input).attr('name') == 'phone') 
+		else if($(input).attr('name') == 'phone') 
 		{
 			if($(input).val().trim().length < 10)//must be at least 10 digits lenght
 			{	
-				$(input).parent().parent().attr("data-validate",minNumbers(10));
 				return false;
 			}
 			if($(input).val().trim().match(/^\+?\d{10,}$/) == null) 
@@ -226,7 +227,7 @@ $(function(){
                 return false;
             }
         }
-		if($(input).attr('name') == 'mobile') 
+		else if($(input).attr('name') == 'mobile') 
 		{
 			if($(input).val().trim().match(/^\+?\d{11,}$/) == null) 
 			{
@@ -248,16 +249,21 @@ $(function(){
 		{
 			if($(input).val().trim().length < 3)//must be at least 3 characters lenght
 			{	
-				$(input).parent().parent().attr("data-validate",minCharacters(3));
 				return false;
 			}
 			
 			var flag1 = true; var flag2 = true;
 			
 			if($(input).val().trim().match(/^[\u0621-\u064A ]+$/) == null)//only arabic letters
+			{
 				flag1=false;
+				
+			}
+				
 			if($(input).val().trim().match(/^[a-zA-Z ]+$/)== null)//only English letters
-                flag2=false;
+            {
+				flag2=false;
+			}    
 			if(flag1 == false && flag2 == false)
 				return false;
 				
@@ -266,7 +272,6 @@ $(function(){
 		{
 			if($(input).val().trim().length < 3)//must be at least 3 characters lenght
 			{	
-				$(input).parent().parent().attr("data-validate",minCharacters(3));
 				return false;
 			}
 			var flag1 = true; var flag2 = true;

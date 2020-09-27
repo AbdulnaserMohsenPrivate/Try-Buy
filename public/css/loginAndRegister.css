@@ -12,7 +12,9 @@ a {
   font-family: "Fira Sans", sans-serif;
   width: 100%;
   height: 100%;
-  margin-bottom:10%;
+}
+.forregister{
+	margin-bottom:150px;
 }
 .registerArea:after {
   content: "";
@@ -31,21 +33,23 @@ a {
   margin: 0 auto;
   position: relative;
   z-index: 2;
+
   /**************************************************** */
   /********************* LOGIN FORM ******************* */
   /**************************************************** */
 }
 .wrapper .login, .wrapper .register {
-  padding-top: 150px;
+  padding-top: 120px;
   width: 100%;
+
 }
 .wrapper .login .profile, .wrapper .register .profile {
-  height: 100px;
-  width: 100px;
+  height: 30px;
+  width: 30px;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 100%;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   position: relative;
 }
 .wrapper .login .profile i, .wrapper .register .profile i {
@@ -68,8 +72,8 @@ a {
   border-bottom: 2px solid transparent;
 }
 .wrapper .login .form-element .ay7aga span, .wrapper .register .form-element .ay7aga span {
+	margin: 20px 0 0 0;
   display: inline-block;
-  width: 20%;
   color: rgba(0, 0, 0, 0.8);
 }
 [dir ='rtl'] .wrapper .login .form-element .ay7aga span, .wrapper .register .form-element .ay7aga span {
@@ -93,9 +97,9 @@ a {
 }
 .wrapper .login .form-element .ay7aga input, .wrapper .register .form-element .ay7aga input {
   font-family: "Fira Sans", sans-serif;
+  width:90%;
   display: inline-block;
-  width: 79%;
-  margin: 20px 0 0 0;
+  margin: 0px 0 0 0;
   padding: 10px 10px 10px 20px;
   background: transparent;
   outline: none;
@@ -128,7 +132,7 @@ a {
 }
 .wrapper .login button, .wrapper .register button {
   position: relative;
-  margin: 30px 0;
+  margin: 20px 0;
   width: 50%;
   padding: 10px;
   outline: none;
@@ -141,6 +145,7 @@ a {
   cursor: pointer;
   left:25%;
   right:25%;
+  
 }
 .wrapper .login button:hover, .wrapper .register button:hover ,.wrapper .login button:focus, .wrapper .register button:focus{
 	background: #c80000;
@@ -150,11 +155,11 @@ a {
 
 
 .login-view-toggle {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(1, 0, 0, 0.8);
   width: 100%;
   text-align: center;
   position: absolute;
-  top: calc(100vh - 90px);
+  top: calc(100vh - 120px);
 }
 [dir ='rtl'] .login-view-toggle {
   font-family: 'Amiri', serif;
@@ -165,6 +170,7 @@ a {
 
 .login-view-toggle .sign-up-toggle, .login-view-toggle .login-toggle {
   display: none;
+  
 }
 .login-view-toggle .sign-up-toggle.is-active, .login-view-toggle .login-toggle.is-active {
   display: block;
@@ -207,6 +213,7 @@ a {
 .login.push-down .profile, .login.push-down button {
   -webkit-transform: scale(1);
           transform: scale(1);
+		  
 }
 .login.push-down button {
   opacity: 1;
@@ -238,7 +245,7 @@ a {
 
 .register {
   position: absolute;
-  top: 50px;
+  top: 5px;
   left: 0;
 }
 .register.down .form-element {
@@ -290,13 +297,7 @@ a {
   transition: all 600ms ease-in-out 3400ms;
 }
 
-@media screen and (max-width: 480px) {
-  .wrapper .login .profile {
-    height: 80px;
-    width: 80px;
-    margin-bottom: 40px;
-  }
-}
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
@@ -315,37 +316,166 @@ a {
 }
 @-webkit-keyframes move-top {
   0% {
-    top: calc(100vh - 90px);
+    top: calc(100vh - 120px);
   }
   100% {
-    top: 150px;
+    top: 120px;
   }
 }
 @keyframes move-top {
   0% {
-    top: calc(100vh - 90px);
+    top: calc(100vh - 120px);
   }
   100% {
-    top: 150px;
+    top: 120px;
   }
 }
 @-webkit-keyframes move-bottom {
   0% {
-    top: 150px;
+    top: 120px;
   }
   100% {
-    top: calc(100vh - 90px);
+    top: calc(100vh - 120px);
   }
 }
 @keyframes move-bottom {
   0% {
-    top: 150px;
+    top: 120px;
   }
   100% {
-    top: calc(100vh - 90px);
+    top: calc(100vh - 120px);
   }
 }
 
+@media screen and (max-width: 769px) {
+	
+	.wrapper .login, .wrapper .register {
+	  padding-top: 25px;
+
+	}
+	
+	.wrapper .login .profile {
+	height: 25px;
+	width: 25px;
+	margin-bottom: 5px;
+	}
+	
+	.login-view-toggle {
+		top: calc(100vh - 230px);
+	}
+	
+	@-webkit-keyframes move-top {
+	  0% {
+		top: calc(100vh - 230px);
+	  }
+	  100% {
+		top: 5px;
+	  }
+	}
+	@keyframes move-top {
+	  0% {
+		top: calc(100vh - 230px);
+	  }
+	  100% {
+		top: 5px;
+	  }
+	}
+	@-webkit-keyframes move-bottom {
+	  0% {
+		top: 5px;
+	  }
+	  100% {
+		top: calc(100vh - 230px);
+	  }
+	}
+	@keyframes move-bottom {
+	  0% {
+		top: 5px;
+	  }
+	  100% {
+		top: calc(100vh - 230px);
+	  }
+	}
+	
+  
+  
+}
+
+@media screen and (max-width: 607px) {
+	
+	.wrapper .login, .wrapper .register {
+	  padding-top: 25px;
+
+	}
+	
+	.wrapper .login .profile {
+	height: 25px;
+	width: 25px;
+	margin-bottom: 5px;
+	}
+	
+	.login-view-toggle {
+		top: calc(100vh - 150px);
+	}
+	
+	@-webkit-keyframes move-top {
+	  0% {
+		top: calc(100vh - 150px);
+	  }
+	  100% {
+		top: 5px;
+	  }
+	}
+	@keyframes move-top {
+	  0% {
+		top: calc(100vh - 150px);
+	  }
+	  100% {
+		top: 5px;
+	  }
+	}
+	@-webkit-keyframes move-bottom {
+	  0% {
+		top: 5px;
+	  }
+	  100% {
+		top: calc(100vh - 150px);
+	  }
+	}
+	@keyframes move-bottom {
+	  0% {
+		top: 5px;
+	  }
+	  100% {
+		top: calc(100vh - 150px);
+	  }
+	}
+  
+  
+}
+
+
+@media screen and (max-width: 547px) {
+	
+	.forregister {
+	  margin-bottom:250px;
+	}
+	
+	.wrapper .login, .wrapper .register {
+	  padding-top: 40px;
+
+	}
+	
+	.wrapper .login .profile {
+	height: 25px;
+	width: 25px;
+	margin-bottom: 5px;
+	}
+	
+	
+  
+  
+}
 
 /*for limitation Me */
 
